@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="585.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab15_danielramirez.FXMLDocumentController">
+    <children>
+        <VBox layoutX="22.0" layoutY="44.0" prefHeight="101.0" prefWidth="198.0">
+            <children>
+                <TextField fx:id="supTextField" promptText="Nombre del articulo" />
+                <Spinner fx:id="numSpinner" prefHeight="25.0" prefWidth="199.0" />
+                <TextField fx:id="infTextField" promptText="Precio unitario" />
+            </children>
+        </VBox>
+        <Label fx:id="tituloLabel" layoutX="22.0" layoutY="14.0" prefHeight="17.0" prefWidth="198.0" text="FACTURADOR DIGITAL">
+            <font>
+                <Font name="Broadway" size="16.0" />
+            </font>
+        </Label>
+        <Button fx:id="agregarButton" layoutX="234.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleAgregar" prefHeight="75.0" prefWidth="36.0" text="+" textFill="#57c333">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <Separator layoutX="290.0" orientation="VERTICAL" prefHeight="145.0" prefWidth="7.0" />
+        <VBox layoutX="305.0" layoutY="45.0" prefHeight="61.0" prefWidth="207.0">
+            <children>
+                <ChoiceBox fx:id="listaChoiceBox" prefHeight="10.0" prefWidth="207.0" />
+                <Button fx:id="borrarButton" mnemonicParsing="false" onAction="#handleBorrar" prefHeight="25.0" prefWidth="209.0" text="BORRAR" textFill="#d31818">
+                    <font>
+                        <Font name="Arial Narrow Bold" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <Separator layoutY="144.0" prefHeight="2.0" prefWidth="526.0" />
+        <ScrollPane layoutX="16.0" layoutY="153.0" prefHeight="299.0" prefWidth="495.0">
+            <content>
+                <TableView fx:id="tablaTableView" prefHeight="299.0" prefWidth="493.0">
+                    <columns>
+                        <TableColumn fx:id="articuloTableColumn" prefWidth="165.0" text="Articulo" >
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="Articulo" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="cantidadTableColumn" minWidth="0.0" text="Cantidad" >
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="Cantidad" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="p_unitarioTableColumn" prefWidth="127.0" text="Precio unitario" >
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="Precio unitario" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="precioTableColumn" prefWidth="107.0" text="Precio" >
+                            <cellValueFactory>
+                                <javafx.scene.control.cell.PropertyValueFactory property="Precio" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+        <Separator layoutY="463.0" prefHeight="3.0" prefWidth="526.0" />
+        <VBox layoutX="22.0" layoutY="476.0" prefHeight="89.0" prefWidth="265.0">
+            <children>
+                <Label fx:id="subTotalLabel" prefHeight="29.0" prefWidth="265.0" text="Subtotal:">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <Label fx:id="ivaLabel" prefHeight="34.0" prefWidth="265.0" text="IVA (16%): " textFill="#e8b02f" />
+                <Label fx:id="totalLabel" prefHeight="29.0" prefWidth="265.0" text="Total: ">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LAB15_DANIELRAMIREZ.jnlp">
+  <information>
+    <title>LAB15_DANIELRAMIREZ</title>
+    <vendor>sistemas</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="LAB15_DANIELRAMIREZ.jar" size="8074" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="LAB15_DANIELRAMIREZ" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="lab15_danielramirez.LAB15_DANIELRAMIREZ"  name="LAB15_DANIELRAMIREZ" />
+  <update check="always"/>
+</jnlp>
