@@ -22,8 +22,8 @@ public class LAB15_DANIELRAMIREZ extends Application {
         launch(args);
         
         //PRUEBA ACTUALIZACION GIT
-        //SEGUNDA PRUEBA, PARA EL PULL
-        
+        //SEGUNDA PRUEBA, PARA EL PULL USANDO CMD
+        //TERCERA PRUEBA, PARA EL PUSH USANDO CMD
     }
     
 }
